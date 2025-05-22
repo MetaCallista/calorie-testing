@@ -4,6 +4,7 @@ use App\Http\Controllers\CalculatorController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\LoanCalculatorController;
+use App\Http\Controllers\CalorieController;
 use App\Models\Task;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,7 @@ Route::post('/calculator', [CalculatorController::class, 'calculate']);
 // Loan
 Route::get('/loan', [LoanCalculatorController::class, 'index']);
 Route::post('/loan', [LoanCalculatorController::class, 'calculate']);
+
+// Calorie
+Route::get('/calorie', [CalorieController::class, 'showForm'])->name('form');
+Route::post('/calorie', [CalorieController::class, 'calculate'])->name('calculate');
