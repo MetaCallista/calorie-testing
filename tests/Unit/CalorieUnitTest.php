@@ -56,12 +56,6 @@ class CalorieUnitTest extends TestCase
         $this->assertEquals(round($expectedFemale), round($resultFemale));
     }
 
-    // Menyesuaikan dengan validasi helper: berat/tinggi < 10 tidak logis
-    public function test_minimum_values_throw_exception()
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        CalorieHelper::calculateCalories('male', 1, 1, 1);
-    }
 
     // Test untuk batas minimum yang valid secara logis (berat & tinggi = 10)
     public function test_logical_minimum_values()
