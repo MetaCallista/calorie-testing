@@ -21,8 +21,8 @@ class CalorieController extends Controller
         // Validasi manual agar bisa redirect balik dengan error dan input
         $validator = Validator::make($request->all(), [
             'gender' => 'required|in:male,female',
-            'weight' => 'required|numeric|min:1',
-            'height' => 'required|numeric|min:1',
+            'weight' => 'required|numeric|min:10',
+            'height' => 'required|numeric|min:10',
             'age' => 'required|integer|min:1',
         ]);
 

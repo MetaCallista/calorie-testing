@@ -15,11 +15,7 @@ class CalorieHelper
         if ($gender !== 'male' && $gender !== 'female') {
             throw new \InvalidArgumentException("Gender harus 'male' atau 'female'.");
         }
-
-        // Validasi berat dan tinggi
-        if ($weight < 10 || $height < 10) {
-            throw new \InvalidArgumentException('Berat atau tinggi tidak logis.');
-        }
+        
 
         // Perhitungan kalori
         if ($gender === 'male') {
