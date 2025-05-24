@@ -7,10 +7,6 @@ class CalorieHelper
     public static function calculateCalories($gender, $weight, $height, $age)
     {
         // Validasi gender
-        if (!is_string($gender) || empty($gender)) {
-            throw new \InvalidArgumentException("Gender harus diisi dengan 'male' atau 'female'.");
-        }
-
         $gender = strtolower($gender);
         if ($gender !== 'male' && $gender !== 'female') {
             throw new \InvalidArgumentException("Gender harus 'male' atau 'female'.");

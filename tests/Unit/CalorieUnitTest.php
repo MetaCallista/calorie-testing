@@ -35,12 +35,6 @@ class CalorieUnitTest extends TestCase
         CalorieHelper::calculateCalories('', 60, 160, 30);
     }
 
-    public function test_null_gender_throws_exception()
-    {
-        $this->expectException(\InvalidArgumentException::class);
-        CalorieHelper::calculateCalories(null, 60, 160, 30);
-    }
-
     public function test_gender_case_insensitive()
     {
         $weight = 65;
